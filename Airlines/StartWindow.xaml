@@ -1,0 +1,17 @@
+﻿<Window x:Class="Airlines.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Airlines"
+        mc:Ignorable="d"
+        Title="StartWindow" Height="200" Width="300" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <DockPanel>
+        <DockPanel.Background>
+            <ImageBrush ImageSource="/Images/startPlane.jpg" Stretch="UniformToFill"></ImageBrush>
+        </DockPanel.Background>
+        <Label DockPanel.Dock="Top" Foreground="WhiteSmoke" HorizontalContentAlignment="Center">Виберіть авіалінії нижче</Label>
+        <Button DockPanel.Dock="Bottom" Margin="20,0,20,5" Background="Transparent" Click="Button_Click" Foreground="WhiteSmoke" BorderBrush="Transparent">Вибрати</Button>
+        <ListBox Background="Transparent" Name="lbAirlines" BorderBrush="Transparent" FontWeight="Bold"></ListBox>
+    </DockPanel>
+</Window>

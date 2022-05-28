@@ -1,0 +1,51 @@
+﻿<Window x:Class="Airlines.FlightsBetweenTownsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Airlines"
+        mc:Ignorable="d"
+       Title="ViewFlightsBetweenTownsWindow" Height="450" Width="600"
+        WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/airlinesFind.png" Stretch="UniformToFill"></ImageBrush>
+    </Window.Background>
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="25"></Setter>
+            <Setter Property="Foreground" Value="#FF144F62"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        </Style>
+        <Style TargetType="DatePicker">
+            <Setter Property="Grid.Column" Value="2"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.ColumnSpan="2" HorizontalContentAlignment="Center">Пошук польотів між містами</Label>
+        <Label Grid.Row="1" FontSize="20">Введіть місто відльоту:</Label>
+        <Label Grid.Row="2" FontSize="20">Введість місто призначення:</Label>
+        <Label Grid.Row="3" FontSize="20">Виберіть початкову дату:</Label>
+        <Label Grid.Row="4" FontSize="20">Виберіть кінцеву дату:</Label>
+
+        <Button Grid.Row="5" Grid.ColumnSpan="2" Background="#FFD6C9C2" Click="Button_Click" MaxWidth="200" Style="{StaticResource actionBtn}" >Знайти</Button>
+        <TextBox VerticalContentAlignment="Center" Padding="2" Grid.Row="1" Grid.Column="1" Margin="20" Name="tbStartTown"></TextBox>
+        <TextBox VerticalContentAlignment="Center" Padding="2" Grid.Row="2" Grid.Column="1" Margin="20" Name="tbDestination"></TextBox>
+        <DatePicker Grid.Row="3" Name="dpStartDate"></DatePicker>
+        <DatePicker Grid.Row="4" Name="dpEndDate"></DatePicker>
+    </Grid>
+</Window>
